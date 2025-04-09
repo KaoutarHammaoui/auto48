@@ -2,12 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import ComingSoon from './auto48/Components/ComingSoon';
 import reportWebVitals from './reportWebVitals';
+
+
+import Prepa from './auto48/Components/preparationComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+   
+       <Prepa/>
+       
+    
+    
   </React.StrictMode>
 );
 

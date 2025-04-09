@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: 'NEO CYBERN';
+  src: url('../src/fonts/NeoCybern-BW69x.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TURRET ROAD';
+  src: url('../src/fonts/TurretRoad-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
