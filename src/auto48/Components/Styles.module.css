@@ -62,11 +62,11 @@ body {
     left: auto;
     max-width: 100%;
     height: auto;
-    margin-top: 1rem;
+    margin-top: 4rem;
 }
 
 /* Adjust for desktops */
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
     /* SocialMedia for desktop */
     .SocialMedia {
         position: absolute; /* Position absolutely on desktop */
@@ -197,7 +197,7 @@ body {
 
 .BreakLine {
     position: absolute;
-    right: 16rem;
+    right: 11rem;
 }
 
 .scrollContainer {
@@ -225,7 +225,7 @@ body {
 .SocialMediaButtons {
     position: relative;
     top: -1.5rem;
-    left: 39.5rem;
+    left: 34.5rem;
     padding-left: 20px;
 }
 
@@ -240,7 +240,7 @@ body {
 
 .fortyeight {
     position: absolute;
-    top: 180px;
+    top: 170px;
     left: 4%;
     max-width: 90%;
     height: auto;
@@ -399,6 +399,17 @@ line-height:21.07px
 }
 .phone{
     color: white;
+    position: relative;
+    top: 3rem;
+    font-family: TURRET ROAD;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+}
+.mail{
+    color: white;
+    position: relative;
+    top: 0.7rem;
     font-family: TURRET ROAD;
     position: relative;
     margin-top: 2rem;
@@ -437,16 +448,16 @@ line-height:21.07px
 .formBg{
     position: absolute;
     top: -77.7rem;
-    left: 55rem;
-    width:461px;
-    height:595.44px
+    left: 50rem;
+    width:461.2px;
+    height:536.49px
 }
 .FormContent{
     position: absolute;
     top:-73.5rem;
-    left: 57.4rem;
+    left: 52rem;
     width:461px;
-    height:595.44px
+    height:495.44px
 }
 .RedLine{
     position:absolute;
@@ -460,10 +471,13 @@ textarea {
     max-width: 350px;
     font-family: TURRET ROAD;
     margin-bottom: 1rem;
+    border: 2px solid #A2A6B0; /* Add a border with your desired color */
+    padding: 0.5rem; /* Optional: add padding for better spacing inside the inputs */
+    border-radius: 4px;
 }
 
 textarea {
-    height: 170px;
+    height: 120px;
 }
 .Contact{
     position: relative;
@@ -482,8 +496,8 @@ textarea {
     background: linear-gradient(to left, #C81717, #640C0C);
     width: 100%;
     max-width: 350px;
-    margin-top: 1rem;
-    padding: 1rem;
+    margin-top: 0rem;
+    padding: 0.7rem;
 }
 
 
