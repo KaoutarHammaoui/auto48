@@ -1,10 +1,17 @@
 /* @font-face for custom font */
+
+@import url('https://cdn.jsdelivr.net/npm/normalize.css/normalize.css');
+
 @font-face {
     font-family: 'NEO CYBERN';
     src: url('../../fonts/NeoCybern-BW69x.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
     font-size: 1rem;
@@ -15,28 +22,86 @@ body {
     overflow-x: hidden;  
   overflow-y: visible   
 }
-
-.container {
+.SocialMedia{
     display: flex;
-    flex-direction: row;
+    
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: row; /* Arrange items in a row for desktops */
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     padding: 1rem 5%;
 }
 
-/* Desktop layout */
+
+/* Base styles for smaller screens (mobile-first approach) */
+.SocialMedia {
+    position: relative; /* Default to relative positioning */
+    top: auto;
+    left: auto;
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    margin-left: 10px; /* Adjust as needed for small screens */
+}
+
+/* Base styles for other components */
+.container-fluid {
+    display: flex;
+    flex-direction: column; /* Default to column layout on small screens */
+    padding: 1rem;
+}
+
+/* For BigCarPic */
 .BigCarPic {
+    position: relative; /* Default position for small screens */
+    top: auto;
+    left: auto;
     max-width: 100%;
     height: auto;
-    position: absolute;
-    top: 7.2rem;
-    left: 40rem;
+    margin-top: 1rem;
 }
+
+/* Adjust for desktops */
+@media (min-width: 1024px) {
+    /* SocialMedia for desktop */
+    .SocialMedia {
+        position: absolute; /* Position absolutely on desktop */
+        top: 69.2rem; /* Adjust vertical position for desktop */
+        left: -0.8rem; /* Adjust horizontal position */
+        display: flex;
+        gap: 0.6rem;
+        align-items: center;
+    }
+
+    /* For container-fluid, make it row layout for desktop */
+    .container-fluid {
+        flex-direction: row; /* Row layout for desktop */
+        padding: 2rem 10%;
+    }
+
+    /* BigCarPic adjustments for desktop */
+    .BigCarPic {
+        position: absolute;
+        top: 7.2rem;
+        left: 40rem;
+        max-width: 50%; /* Limit image width */
+        height: auto;
+    }
+}
+
+
+
+
+/* Desktop layout */
+
 
 .RepParagraphes {
     position: relative;
-    margin-top: -3.5rem;
+    margin-top: -2.49rem;
     left: 6rem;
     top: 1.25rem;
     padding: 0 5%;
@@ -86,6 +151,7 @@ body {
     position: relative;
     top: 18rem;
     left: -0.5rem;
+    display: flex;
 }
 
 .LoremTittleST,
@@ -158,8 +224,8 @@ body {
 
 .SocialMediaButtons {
     position: relative;
-    top: -2rem;
-    left: 42%;
+    top: -1.5rem;
+    left: 39.5rem;
     padding-left: 20px;
 }
 
@@ -220,7 +286,7 @@ body {
 }
 .vectorJ{
     position: absolute;
-    right: -39rem;
+    right: -85rem;
     background: none;
     border: none;
 }
@@ -331,6 +397,21 @@ line-height:21.07px
     position: relative;
     margin-top: 1.5rem;
 }
+.phone{
+    color: white;
+    font-family: TURRET ROAD;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+}
+.SocialMedia {
+    position: absolute; /* or fixed if you want them fixed on the screen */
+    top: 69.2rem; /* Adjust as needed */
+    left:-0.8rem; /* Adjust as needed */
+    display: flex;
+    gap: 0.6rem; /* Space between icons */
+    align-items: center; /* Center them vertically */
+  }
 .Location{
     top: 1.7rem;
 }
@@ -405,68 +486,4 @@ textarea {
     padding: 1rem;
 }
 
-/* ✅ Mobile Responsive Fix */
-@media (max-width: 768px) {
-    .row {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-    }
 
-    .col-5 {
-        width: 100% !important;
-    }
-
-    .RepParagraphes {
-        position: static !important;
-        margin: 1rem 0 !important;
-        left: auto !important;
-        top: auto !important;
-    }
-
-    .MecanicLogo,
-    .secLogo,
-    .LoremTittleST,
-    .LoremTittleND,
-    .FstPDesciption,
-    .NDPDesciption,
-    .BgParagrapheST,
-    .BgParagrapheND {
-        position: static !important;
-        margin: 1rem auto;
-        display: block;
-        text-align: center;
-    }
-
-    .LoremTittleST,
-    .LoremTittleND {
-        font-size: 1.1rem;
-    }
-
-    .FstPDesciption,
-    .NDPDesciption {
-        font-size: 0.9rem;
-        line-height: 1.4;
-    }
-
-    .secondLorem {
-        font-size: 1rem;
-    }
-
-    .BgParagrapheST,
-    .BgParagrapheND {
-        width: 100%;
-        height: auto;
-    }
-
-    .SecNdP {
-        margin-top: 2rem;
-    }
-
-    /* Adjusting images in scroll container for responsiveness */
-    .scrollContainer img {
-        width: 100%;
-        max-width: 300px;  /* Restrict image size */
-        height: auto;
-    }
-}

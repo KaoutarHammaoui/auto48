@@ -36,7 +36,7 @@ function Prepa(){
     const[phone,setPhone]=useState();
     return(
      <div >
-        <div className={Styles.wrapper}>
+        <div className="container-fluid">
           
           <div className="row">
             <div className="col-12">
@@ -61,7 +61,7 @@ function Prepa(){
           {/*paragraphes descriptions*/}
           <div className="row">
             
-            <div className={`col-5 ${Styles.RepParagraphes}`}>
+            <div className={`col-8 ${Styles.RepParagraphes}`}>
             <p className={Styles.ReparationP}>Réparation et réglage <br />automobile innovants.</p>
             <p className={Styles.secondLorem}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Donec dolor ante, posuere faucibus elit ut, aliquam.</p>
             <div>
@@ -81,7 +81,7 @@ function Prepa(){
             </div>
             <div className="col-1"></div>
             
-            <div className="col-6">
+            <div className="col-3">
                 <img src={carpic} className={Styles.BigCarPic} alt="" />
             </div>
           </div>
@@ -107,7 +107,7 @@ function Prepa(){
         
            <img src={BreakLine} className={Styles.BreakLine} alt=""  />
             {/* social media links */}
-            <div >
+            <div style={{display:"flex"}} className={Styles.SocialMedia}>
            <a href="https://web.facebook.com/?locale=fr_FR&_rdc=1&_rdr" target="_blank" rel="noopener noreferrer">
              <img src={FacebookLogo} alt="" className={Styles.SocialMediaButtons}/>
            </a>
@@ -177,7 +177,14 @@ function Prepa(){
                               <textarea name=""  id="">Message</textarea>
                               <button className={`btn ${Styles.Submit}`}>Envoyé</button>
                               </div>
-                             <p className={Styles.RightsReservedP}>© SOFTCACTUS, Tous les droits sont réservés, 2025</p> 
+                              <div className="row">
+                                <div className="col-3"></div>
+                                <div className="col-6">
+                                <p className={Styles.RightsReservedP}>© SOFTCACTUS, Tous les droits sont réservés, 2025</p> 
+                                </div>
+                                <div className="col-3"></div>
+                              </div>
+                             
                             </div> 
                            </div>
  </div>   
