@@ -163,8 +163,8 @@ body {
     }
     .scrollContainer img {
         flex: 0 0 auto;
-        width: 26% !important;
-        max-width: 350px;
+        width: 100%;
+        max-width: 190px !important;
         height: auto;
         border-radius: 8px;
     }
@@ -436,16 +436,23 @@ body {
         
        
     }
+    .scrollContainer img {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 200px !important;
+        height: auto;
+        border-radius: 8px;
+    }
     .BreakLine{
         position: relative !important;
-        margin-left: 11rem !important;
+        margin-left: 15.5rem !important;
     }
     .SocialMediaButtons {
         
         position: relative;
-        left:24.5rem !important ;
-        top: -3rem !important;
-        justify-content: center !important;
+        top: -14.2rem !important;
+        left:29.25rem !important ;
+        
        
       }
       .bgJ {
@@ -463,12 +470,12 @@ body {
         top: -22rem !important;
       }
       .CarToJoinUs{
-      right: 3rem !important;
+      right: 8rem !important;
         margin-left: 6rem !important;
       }
       .vectorJ{
-       left:67rem !important ;
-       top: 70rem !important;
+       left:68rem !important ;
+       top: 59rem !important;
 
       }
       .RightsReservedP{
@@ -588,15 +595,26 @@ body {
     position: absolute;
     right: 11rem;
 }
+@keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-40%);
+    }
+  }
 
 .scrollContainer {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    gap: 10px;
+    gap: 14px;
+    width: max-content;
     padding: 10px;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
+    animation: scrollLeft 15s linear infinite;
+  will-change: transform;
 }
 
 .scrollContainer img {
@@ -605,6 +623,7 @@ body {
     max-width: 350px;
     height: auto;
     border-radius: 8px;
+    
 }
 .scrollContainer::-webkit-scrollbar {
     display: none; 

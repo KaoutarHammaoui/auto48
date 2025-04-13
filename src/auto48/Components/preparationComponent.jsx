@@ -101,6 +101,27 @@ function Prepa(){
            <img src={eighthImgInrow} alt="" />
           <img src={ninethImg} alt="" />
           <img src={lastImgInrow} alt="" />
+          {/*duplications f images */}
+          <img src={sixthImage} alt="" />
+           <img src={seventhImgInrow} alt="" />
+           <img src={eighthImgInrow} alt="" />
+           <img src={ninethImg} alt="" />
+           <img src={lastImgInrow} alt="" />
+           <img src={sixthImage} alt="" />
+           <img src={seventhImgInrow} alt="" />
+           <img src={eighthImgInrow} alt="" />
+          <img src={ninethImg} alt="" />
+          <img src={lastImgInrow} alt="" />
+          <img src={sixthImage} alt="" />
+           <img src={seventhImgInrow} alt="" />
+           <img src={eighthImgInrow} alt="" />
+           <img src={ninethImg} alt="" />
+           <img src={lastImgInrow} alt="" />
+           <img src={sixthImage} alt="" />
+           <img src={seventhImgInrow} alt="" />
+           <img src={eighthImgInrow} alt="" />
+          <img src={ninethImg} alt="" />
+          <img src={lastImgInrow} alt="" />
           </div> <br /> <br /> <br />
 
           
@@ -182,7 +203,7 @@ function Prepa(){
                               </div>
                               <div className="row">
                                 
-                                <div className="col-3"></div>
+                                <div className="col-3"></div>  
                                 <div className="col-3 md-col-6">
                                 <p className={Styles.RightsReservedP}>© SOFTCACTUS, Tous les droits sont réservés, 2025</p> 
                                
