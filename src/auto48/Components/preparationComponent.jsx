@@ -11,6 +11,7 @@ import ParagraphesBackground from '../Pics/Paragraphesbackground.png';
 import FirstPlogo from '../Pics/FirstPlogo.png';
 import secondLogo from '../Pics/secndParLogo.png';
 import lastImgInrow from '../Pics/lastImgInRow.png';
+import backgroundContactMobile from '../Pics/vec14.png'
 import ninethImg from '../Pics/9ImgInRow.png';
 import seventhImgInrow from '../Pics/7ImgInRow.png';
 import sixthImage from '../Pics/6ImgInRow.png';
@@ -34,15 +35,16 @@ function Prepa(){
    const[LName,setLName]=useState();
     const [FName,setFName]=useState();
     const[phone,setPhone]=useState();
+    const[message,setMessage]=useState('');
     return(
      <div >
         <div className="container-fluid">
-          
+         
           <div className="row">
-            <div className="col-12">
-              <img src={VectorTop} alt=""style={{ maxWidth: '100%', height: 'auto',position:'absolute',left:'0px',top:'2px'}}/> <br /> <br />
-              <img src={Vector2} alt="" style={{maxWidth:'100%' , height:'auto',position:'absolute',left:'0px'}} />
-               <img src={BigVector} alt="" style={{maxWidth:'100%', height:'auto', position:'absolute', left:'120px',top:'0px'}}/> <br />
+            <div className={`col-12 ${Styles.VectorsTop}`}>
+              <img src={VectorTop} alt="" className={Styles.VectorsTop} style={{ maxWidth: '100%', height: 'auto',position:'absolute',left:'4rem',top:'2px'}}/> <br /> <br />
+              <img src={Vector2} alt="" className={Styles.VectorsTop} style={{maxWidth:'100%' , height:'auto',position:'absolute',left:'4rem'}} />
+               <img src={BigVector} className={Styles.BigVector} alt="" style={{maxWidth:'100%', height:'auto', position:'absolute', left:'130px',top:'-5px'}}/> <br />
             </div>
 
             
@@ -61,10 +63,10 @@ function Prepa(){
           {/*paragraphes descriptions*/}
           <div className="row">
             
-            <div className={`col-8 ${Styles.RepParagraphes}`}>
+            <div className={`col-12 col-md-6 ${Styles.RepParagraphes}`}>
             <p className={Styles.ReparationP}>Réparation et réglage <br />automobile innovants.</p>
             <p className={Styles.secondLorem}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Donec dolor ante, posuere faucibus elit ut, aliquam.</p>
-            <div>
+            <div className={Styles.fstDes}>
             <img src={ParagraphesBackground} alt="" className={Styles.BgParagrapheST}  />
             <img src={FirstPlogo} className={Styles.MecanicLogo}alt="" />
             <p className={Styles.LoremTittleST}> <b> LOREM IPSUM DOLOR </b> </p>
@@ -107,7 +109,7 @@ function Prepa(){
         
            <img src={BreakLine} className={Styles.BreakLine} alt=""  />
             {/* social media links */}
-            <div style={{display:"flex"}} className={Styles.SocialMedia}>
+            <div className={Styles.SocialMedia}>
            <a href="https://web.facebook.com/?locale=fr_FR&_rdc=1&_rdr" target="_blank" rel="noopener noreferrer">
              <img src={FacebookLogo} alt="" className={Styles.SocialMediaButtons}/>
            </a>
@@ -133,7 +135,7 @@ function Prepa(){
                            <div className={`row ${Styles.joinComponent}`}>
                             <img src={carj} alt="car" className={Styles.CarToJoinUs} />
                             
-                            <img src={Backgroundj} alt="" />
+                            <img src={Backgroundj} alt="" className={Styles.bgJ} />
                             <img src={trianglej} alt="" className={Styles.triangle}/>
                             <img src={fortyeight} alt=""  className={Styles.fortyeight}/>
                             <div className={`col-5 ${Styles.joinPs}`}>
@@ -171,19 +173,23 @@ function Prepa(){
                               <img src={formBg} className={Styles.formBg} alt=""  />
                               <div className={Styles.FormContent}>
                               <img  className={Styles.RedLine} src={redLinear} alt="" /> <p className={Styles.TalkToUs}>Parlez-nous</p> <br />
-                              <input type="text"  placeholder="Nom" value={LName} onChange={(e)=>{setLName(e.target.value)}} /> <br />
+                              <input type="text"  placeholder="Nom" value={LName} onChange={(e)=>{setLName(e.target.value)}} style={{color:"black"}} className={Styles.placeholdNom}/> <br />
                               <input type="text"  placeholder="Prénom" value={FName} onChange={(e)=>{setFName(e.target.value)}}/>  <br />
                               <input type="text"  placeholder="Téléphone" value={phone} onChange={(e)=>{setPhone(e.target.value)}} />  <br />
-                              <textarea name=""  id="">Message</textarea>
+                              <textarea name=""  id="" placeholder='Message' value={message}></textarea>
                               <button className={`btn ${Styles.Submit}`}>Envoyé</button>
+                              <p className={Styles.RightsReservedPM}>© SOFTCACTUS, Tous les droits <br /> sont réservés, 2025</p>
                               </div>
                               <div className="row">
+                                
                                 <div className="col-3"></div>
-                                <div className="col-6">
+                                <div className="col-3 md-col-6">
                                 <p className={Styles.RightsReservedP}>© SOFTCACTUS, Tous les droits sont réservés, 2025</p> 
+                               
                                 </div>
                                 <div className="col-3"></div>
                               </div>
+                             
                              
                             </div> 
                            </div>
